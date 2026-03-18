@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "microsoft-learn-mcp-server"
+version = "0.1.0"
+description = "MCP server for Microsoft Learn technical documentation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.14.0",
+    "mcp[cli]>=1.23.0",
+    "httpx>=0.27.0",
+    "beautifulsoup4>=4.12.0",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+microsoft-learn-mcp-server = "microsoft_learn_mcp_server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["microsoft_learn_mcp_server"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
