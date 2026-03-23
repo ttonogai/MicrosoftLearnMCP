@@ -49,6 +49,27 @@ cd MicrosoftLearnMCPServer && pwd
 }
 ```
 
+## WSLを利用する場合
+`Kiroでの設定`を参考に、以下を`.kiro/settings/mcp.json`に追加してください。
+
+```json
+{
+  "mcpServers": {
+    "microsoft-learn": {
+      "command": "wsl",
+      "args": [
+        "/home/tono/work/kiro/MicrosoftLearnMCPServer/.venv/bin/microsoft-learn-mcp-server"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "search_documentation",
+        "read_documentation"
+      ]
+    }
+  }
+}
+```
+
 ## 提供するツール
 
 ### `search_documentation`
