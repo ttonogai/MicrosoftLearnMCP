@@ -58,7 +58,7 @@ cd MicrosoftLearnMCPServer && pwd
     "microsoft-learn": {
       "command": "wsl",
       "args": [
-        "/home/tono/work/kiro/MicrosoftLearnMCPServer/.venv/bin/microsoft-learn-mcp-server"
+        "/path/to/MicrosoftLearnMCPServer/.venv/bin/microsoft-learn-mcp-server"
       ],
       "disabled": false,
       "autoApprove": [
